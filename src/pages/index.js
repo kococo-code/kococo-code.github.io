@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostLink from "../components/post-link"
-
+import "./contents.scss"
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -15,7 +15,7 @@ const IndexPage = ({
   return (
   <Layout>
     <SEO title="Home" />
-    <div>{Posts}</div>
+    <section className="Contents">{Posts}</section>
   </Layout>
   )
 }

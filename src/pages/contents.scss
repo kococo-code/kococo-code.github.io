@@ -1,0 +1,20 @@
+.Contents{
+    display : flex;
+    flex-wrap : wrap;
+    width : 80%;
+    margin : 0 auto;
+    font-family : "PT Mono", monospace;
+    a{
+        text-decoration: none;
+        color : black;
+    }
+    .card{
+        width : 200px;
+        height : 300px;
+        margin : 10px;
+        text-align : center;
+       strong{
+           font-style : bold;
+       }
+    }
+}

@@ -1,12 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const PostLink = ({ post }) => (
-  <div>
-    <Link to={post.frontmatter.slug}>
-      {post.frontmatter.title} ({post.frontmatter.date})
-    </Link>
-  </div>
-)
+export default function PostLink({ post }){
+    return(
+        <article className="card">
+            <Link to={post.frontmatter.slug}>
+            <strong className="title">{post.frontmatter.title}</strong>
+            <div className="date">{post.frontmatter.date}</div>
+            </Link>
+        </article>
+    )
+}
 
-export default PostLink

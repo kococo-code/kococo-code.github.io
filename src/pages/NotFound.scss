@@ -1,7 +1,19 @@
 #NotFound{
     width : 50%;
-    margin : 300px auto;
+    margin : 300px auto 100px auto;
     text-align: center;
     font-family : 'Montserrat' , sans-serif;
     font-size : 64px;
+}
+.button-wrapper{
+    width : 50%;
+    margin : 0 auto;
+    text-align: center;
+
+}
+.back-btn{
+    font-family : 'Montserrat' , sans-serif;
+    font-size : 40px;
+    text-decoration : none;
+    color : black;
 }

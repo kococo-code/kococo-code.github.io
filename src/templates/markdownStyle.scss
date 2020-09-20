@@ -1,3 +1,7 @@
+::selection{
+    background : #222;
+    color : white;
+}
 .blog-post-container{
     width : 50%;
     margin : 0 auto;
@@ -5,15 +9,21 @@
         font-family : 'Montserrat' , sans-serif;
         font-size : 40px;
         font-weight : 800;
+        color : rgba(22,22,22,.8);
+    }
+    span{
+        font-family : "PT Mono" , monospace;
+        font-size : 16px;
     }
 }
 .blog-post-content{
+    margin-top : 50px;
     font-family : Arial, Helvetica, sans-serif;
     h1{
         font-size : 32px;
         font-weight : 800;
     }
-    h2{
+    span{
         font-size : 24px;
     }
     h3{

@@ -9,13 +9,14 @@ export default function Template({
 }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
   return (
     <React.Fragment>
       <Header></Header>
     <div className="blog-post-container">
       <div className="blog-post">
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <span>{frontmatter.date}</span>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -31,9 +32,11 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY MMMM, DD")
         slug
         title
+        subtitle
+        tags
       }
     }
   }
