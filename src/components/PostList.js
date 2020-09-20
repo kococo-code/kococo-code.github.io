@@ -1,26 +1,20 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PostLink from "../components/post-link"
+import { graphql } from "gatsby"
+import PostLink from "./post-link"
 
-const IndexPage = ({
+const PostList = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date)
+    .filter(edge => !!edge.node.frontmatter.date) 
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
-  return (
-  <Layout>
-    <SEO title="Home" />
-    <div>{Posts}</div>
-  </Layout>
-  )
+  return <div>{Posts}</div>
 }
 
-export default IndexPage
+export default PostList
 
 export const pageQuery = graphql`
   query {

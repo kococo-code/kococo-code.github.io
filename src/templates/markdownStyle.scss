@@ -1,0 +1,27 @@
+.blog-post-container{
+    width : 50%;
+    margin : 0 auto;
+    h1{
+        font-family : 'Montserrat' , sans-serif;
+        font-size : 40px;
+        font-weight : 800;
+    }
+}
+.blog-post-content{
+    font-family : Arial, Helvetica, sans-serif;
+    h1{
+        font-size : 32px;
+        font-weight : 800;
+    }
+    h2{
+        font-size : 24px;
+    }
+    h3{
+        font-size : 20px;
+    }
+    hr{
+    }
+    code{
+        font-size : 16px;
+    }
+}
