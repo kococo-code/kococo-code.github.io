@@ -1,3 +1,5 @@
+const path = require('path')
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
     const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`)
@@ -31,5 +33,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           slug: node.frontmatter.slug,
         },
       })
+    })
+  }
+  
+  exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          components: path.resolve(__dirname, 'src/components'),
+          templates: path.resolve(__dirname, 'src/templates'),
+          images: path.resolve(__dirname, 'src/images'),
+          utils: path.resolve(__dirname, 'src/utils'),
+          pages: path.resolve(__dirname, 'src/pages'),
+        },
+      },
     })
   }

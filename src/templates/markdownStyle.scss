@@ -2,36 +2,90 @@
     background : #222;
     color : white;
 }
-.blog-post-container{
-    width : 50%;
-    margin : 0 auto;
-    h1{
-        font-family : 'Montserrat' , sans-serif;
-        font-size : 40px;
-        font-weight : 800;
-        color : rgba(22,22,22,.8);
+
+@media (min-width : 1024px){
+    .blog-post-container{
+        width : 70%;
+        margin : 200px auto;
+        text-align: left;
+        .post-title{
+            h1{
+            font-family : 'Montserrat' , sans-serif;
+            font-size : 40px;
+            font-weight : 800;
+            color : rgba(22,22,22,1);
+            margin-bottom : 3px;
+            }
+            span{
+                text-align: right;
+                font-family : "PT Mono" , monospace;
+                font-size : 16px;
+            }
+        }
     }
-    span{
-        font-family : "PT Mono" , monospace;
-        font-size : 16px;
+    .blog-post-content{
+        width : 95%;
+        margin : 50px auto;
+        font-family : Arial, Helvetica, sans-serif;
+        h1{
+            font-size : 32px;
+            font-weight : 800;
+        }
+        span{
+            font-size : 24px;
+        }
+        h3{
+            font-size : 20px;
+        }
+        hr{
+        }
+        pre{
+            background : rgba(22,22,22,.8);
+            color : white;
+            code{
+                font-size : 16px;
+            }
+        }
+        img{
+            display: block;
+            margin : auto;
+        }
+        
     }
 }
-.blog-post-content{
-    margin-top : 50px;
-    font-family : Arial, Helvetica, sans-serif;
-    h1{
-        font-size : 32px;
-        font-weight : 800;
-    }
-    span{
-        font-size : 24px;
-    }
-    h3{
-        font-size : 20px;
-    }
-    hr{
-    }
-    code{
+.tags{
+    display : flex;
+    flex-direction : row;
+    list-style : none;
+    font-family : 'PT Mono' , monospace;
+    font-weight : 100;
+    margin-top : 10px;
+    margin-left : 0px;
+  
+    .tag{
+        padding : 1px 3px 1px 3px;
+        margin : 3px;
+        border-radius : 5px;
         font-size : 16px;
+    }
+    .tag-main{
+        font-size : 16px;
+        border-radius : 5px;
+        margin-top : 5px;
+        margin-right: 5px;
+        padding : 1px 3px 1px 3px;
+        color : rgba(22,22,22,.7);
+    }
+    .React{
+        background-color : #61BDFD;
+        color : #eee;
+    }
+    .Gatsby{
+        background-color: #663399;
+        color : #eee;
+    }
+    .JS{
+        background-color : #f0bd4f;
+        color : rgba(50,51,48,.6);
     }
 }

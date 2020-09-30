@@ -1,7 +1,8 @@
 
 import React from "react"
 import { graphql } from "gatsby"
-import Header from '../components/header';
+import Header from 'components/header';
+import TagsParser  from 'utils/tagsParser';
 import './markdownStyle.scss';
 
 export default function Template({
@@ -9,20 +10,23 @@ export default function Template({
 }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-
   return (
     <React.Fragment>
       <Header></Header>
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <span>{frontmatter.date}</span>
+    <section className="blog-post-container">
+      <article className="blog-post">
+        <div className="post-title">
+          <h1>{frontmatter.title}</h1>
+          <span>{frontmatter.date}</span>
+          <TagsParser tags={frontmatter.tags}></TagsParser>
+        </div>
+       
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </div>
+      </article>
+    </section>
     </React.Fragment>
   )
 }
@@ -35,8 +39,8 @@ export const pageQuery = graphql`
         date(formatString: "YYYY MMMM, DD")
         slug
         title
-        subtitle
         tags
+        thumbs
       }
     }
   }

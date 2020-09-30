@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PostLink from "../components/post-link"
+import Layout from "components/layout"
+import SEO from "components/seo"
+import PostLink from "components/post-link"
 import "./contents.scss"
 const IndexPage = ({
   data: {
@@ -11,7 +11,6 @@ const IndexPage = ({
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-
   return (
   <Layout>
     <SEO title="Home" />
@@ -33,6 +32,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            tags
+            thumbs
           }
         }
       }

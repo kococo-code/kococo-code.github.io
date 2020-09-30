@@ -2,19 +2,33 @@
     display : flex;
     flex-wrap : wrap;
     width : 80%;
-    margin : 0 auto;
+    margin : 200px auto;
     font-family : "PT Mono", monospace;
     a{
         text-decoration: none;
         color : black;
     }
     .card{
-        width : 200px;
-        height : 300px;
+        width : 300px;
+        height : 400px;
         margin : 10px;
         text-align : center;
-       strong{
+        overflow : hidden;
+        margin-top : 2px solid rgba(22,22,22,.4);
+        img{
+            margin-top : 5px;
+        }
+        strong{
            font-style : bold;
-       }
+        }
+        .date{
+           text-align: right;
+           font-size : 14px;
+           
+        }
+        .card-tags{
+           margin-left : 4px;
+        }
+       
     }
 }
