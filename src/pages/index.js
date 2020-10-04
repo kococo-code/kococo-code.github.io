@@ -3,6 +3,7 @@ import Layout from "components/layout"
 import SEO from "components/seo"
 import PostLink from "components/post-link"
 import "./contents.scss"
+import "./index.scss"
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },

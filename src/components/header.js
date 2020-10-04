@@ -4,9 +4,9 @@ import React from "react"
 import './header.scss';
 const Header = ({ siteTitle }) => (
       <header>
-        <Link to="https://github.com/kococo-code" target="_blank">Kococo</Link>
+        <Link to="/">Kococo</Link>
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/">Posts</Link>
           <Link to="/about">about</Link>
 
         </nav>

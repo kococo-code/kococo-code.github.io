@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Kococo Dev`,
-    description: `Kococo Development Blog`,
+    title: `Kococo Tech Blog`,
+    description: `Kococo Tech Blog`,
     author: `@Jintaek Lim`,
   },
   plugins: [
@@ -34,5 +34,6 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
   ],
+  
 }
 
