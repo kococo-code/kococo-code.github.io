@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import TagsParser from 'utils/tagsParser';
 export default function PostLink({ post }){
-    console.log(post.frontmatter)
     return(
         <Link className="card" to={post.frontmatter.slug}>
             <img src={post.frontmatter.thumbs} alt="thumb"></img>

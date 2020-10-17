@@ -7,10 +7,8 @@ const About = () => (
     <SEO title="about" />
     <Header></Header>
     <section id="About">
-        About Me Page
     </section>
     <div className="button-wrapper">
-      <Link className="back-btn" to="/">Back</Link>
     </div>
   </React.Fragment>
 

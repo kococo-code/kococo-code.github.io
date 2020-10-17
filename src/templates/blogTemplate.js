@@ -14,6 +14,7 @@ export default function Template({
     <React.Fragment>
       <Header></Header>
     <section className="blog-post-container">
+      <div className="blog-post-top"></div>
       <article className="blog-post">
         <div className="post-title">
           <h1>{frontmatter.title}</h1>
