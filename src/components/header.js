@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
         <Link to="/">Kococo</Link>
         <nav>
           <Link to="/">Posts</Link>
-          <Link to="/about">about</Link>
+          <Link target="_blank" to="https://github.com/kococo-code">about</Link>
 
         </nav>
       </header>

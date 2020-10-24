@@ -11,10 +11,8 @@
         }
         .card{
             width : 300px;
-            height : 400px;
             margin : 10px;
             text-align : center;
-            overflow : hidden;
             margin-top : 2px solid rgba(22,22,22,.4);
             img{
                 margin-top : 5px;
@@ -38,8 +36,8 @@
     .Contents{
         display : flex;
         flex-direction : column;
-        width : 80%;
-        margin : 100px auto 0px auto;
+        width : 50%;
+        margin : 150px auto 0px auto;
         font-family : "PT Mono", monospace;
         a{
             text-decoration: none;
@@ -64,7 +62,7 @@
             
             }
             .card-tags{
-            margin-left : 4px;
+                margin-left : 4px;
             }
         
         }
